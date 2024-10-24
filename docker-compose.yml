@@ -1,11 +1,11 @@
 services:
   eshopwebmvc:
-    image: ${DOCKER_REGISTRY-}eshopwebmvc
+    image: 093215643118.dkr.ecr.us-east-1.amazonaws.com/eshopwebmvc:latest
     build:
       context: .
       dockerfile: src/Web/Dockerfile
   eshoppublicapi:
-    image: ${DOCKER_REGISTRY-}eshoppublicapi
+    image: 093215643118.dkr.ecr.us-east-1.amazonaws.com/eshoppublicapi:latest
     build:
       context: .
       dockerfile: src/PublicApi/Dockerfile
