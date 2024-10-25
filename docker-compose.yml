@@ -1,6 +1,6 @@
 services:
   eshopwebmvc:
-    image: 093215643118.dkr.ecr.us-east-1.amazonaws.com/eshoppublicapi:latest
+    image: 093215643118.dkr.ecr.us-east-1.amazonaws.com/eshopwebmvc:latest
     build:
       context: .
       dockerfile: src/Web/Dockerfile
