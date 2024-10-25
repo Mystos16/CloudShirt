@@ -4,8 +4,18 @@ services:
     build:
       context: .
       dockerfile: src/Web/Dockerfile
+    deploy:
+      replicas: 3  # Run 3 replicas of this service
+      placement:
+        constraints:
+          - node.role == worker
   eshoppublicapi:
     image: 093215643118.dkr.ecr.us-east-1.amazonaws.com/eshoppublicapi:latest
     build:
       context: .
       dockerfile: src/PublicApi/Dockerfile
+    deploy:
+      replicas: 3  # Run 3 replicas of this service
+      placement:
+        constraints:
+          - node.role == worker
