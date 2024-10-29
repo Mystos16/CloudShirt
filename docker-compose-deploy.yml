@@ -1,0 +1,15 @@
+services:
+  eshopwebmvc:
+    image: 093215643118.dkr.ecr.us-east-1.amazonaws.com/eshopwebmvc:latest
+    deploy:
+      replicas: 3
+      placement:
+        constraints:
+          - node.role == worker
+  eshoppublicapi:
+    image: 093215643118.dkr.ecr.us-east-1.amazonaws.com/eshoppublicapi:latest
+    deploy:
+      replicas: 3
+      placement:
+        constraints:
+          - node.role == worker
